@@ -1,8 +1,8 @@
 package acme
 
-import logging.Logger
+import logging._
 
-class Store(initialStock: Int) extends Logger {
+class Store(initialStock: Int) extends ConsoleLogger {
   private var inStock = 0
   widgetsInStock = initialStock
 
@@ -14,8 +14,8 @@ class Store(initialStock: Int) extends Logger {
   }
 
   def order(numWidgets: Int) =  {
-    log("Order arrived...")
+    info("Order arrived...")
     widgetsInStock -= numWidgets
-    log(s"Order complete -- widgets in stock: $widgetsInStock")
+    info(s"Order complete -- widgets in stock: $widgetsInStock")
   }
 }
