@@ -34,3 +34,10 @@ trait TimestampLogger extends Logger {
     super.log(s"[$date] $message")
   }
 }
+
+// mixin implementation: lowercase message
+trait LowercaseLogger extends Logger {
+  abstract override def log(message: String) {
+    super.log(message.toLowerCase)
+  }
+}

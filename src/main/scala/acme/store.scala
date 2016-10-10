@@ -4,7 +4,8 @@ import logging._
 
 class Store(initialStock: Int) extends ConsoleLogger 
                                   with Debugging 
-                                  with TimestampLogger {
+                                  with TimestampLogger 
+                                  with LowercaseLogger {
   private var inStock = 0
   widgetsInStock = initialStock
 
