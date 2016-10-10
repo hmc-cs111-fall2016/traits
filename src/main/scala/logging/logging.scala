@@ -29,7 +29,7 @@ trait Debugging extends Logger {
 
 // mixin implementation: prepend a timestamp
 trait TimestampLogger extends Logger {
-  override def log(message: String) {
+  abstract override def log(message: String) {
     val date = new java.util.Date()
     super.log(s"[$date] $message")
   }
