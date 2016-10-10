@@ -20,3 +20,9 @@ trait ConsoleLogger extends Logger {
     println(message)
   }
 }
+
+// mixin: debug
+trait Debugging extends Logger {
+  def debugTag = "[debug]"
+  def debug(message: String) = log(s"$debugTag $message")
+}
