@@ -26,3 +26,11 @@ trait Debugging extends Logger {
   def debugTag = "[debug]"
   def debug(message: String) = log(s"$debugTag $message")
 }
+
+// mixin implementation: prepend a timestamp
+trait TimestampLogger extends Logger {
+  override def log(message: String) {
+    val date = new java.util.Date()
+    super.log(s"[$date] $message")
+  }
+}

@@ -2,7 +2,9 @@ package acme
 
 import logging._
 
-class Store(initialStock: Int) extends ConsoleLogger with Debugging {
+class Store(initialStock: Int) extends ConsoleLogger 
+                                  with Debugging 
+                                  with TimestampLogger {
   private var inStock = 0
   widgetsInStock = initialStock
 
