@@ -2,7 +2,7 @@ package acme
 
 import logging._
 
-class Store(initialStock: Int) extends ConsoleLogger 
+class Store(initialStock: Int) extends ColoredConsoleLogger 
                                   with Debugging 
                                   with TimestampLogger 
                                   with LowercaseLogger {

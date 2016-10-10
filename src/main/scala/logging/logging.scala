@@ -41,3 +41,10 @@ trait LowercaseLogger extends Logger {
     super.log(message.toLowerCase)
   }
 }
+
+// extending an existing trait
+trait ColoredConsoleLogger extends ConsoleLogger {
+  override def infoTag = Console.GREEN + super.infoTag + Console.RESET
+  override def warningTag = Console.YELLOW + super.warningTag + Console.RESET
+  override def errorTag = Console.RED + super.errorTag + Console.RESET
+}
