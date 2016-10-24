@@ -1,7 +1,7 @@
 package acme
 
 object Program extends App {
-  final val CAPACITY = 100
+  val CAPACITY = 100
   val store = new Store(CAPACITY)
 
   store.order(CAPACITY / 2)

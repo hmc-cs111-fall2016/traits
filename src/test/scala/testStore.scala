@@ -4,7 +4,7 @@ import org.scalatest.{FunSpec, Matchers}
 
 class StoreSpec extends FunSpec with Matchers {
   
-  final val CAPACITY = 100
+  val CAPACITY = 100
   val store = new Store(CAPACITY)
 
   describe("A store") {
